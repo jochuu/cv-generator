@@ -6,23 +6,7 @@
 
 body {}
 
-main {
-  display: flex;
-  flex-flow: row wrap;
-}
 
-label {
-  display: flex;
-  margin-bottom: 0.4rem;
-}
-
-input, textarea {
-  max-width: 10rem;
-  padding: 0.4rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
 
 /* PERSONAL */
 .personal-container {

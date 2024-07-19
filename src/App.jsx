@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import ThemeToggle from './components/ThemeToggle';
 import Personal from './components/Personal';
+import WorkExperience from './components/WorkExperience';
+import Education from './components/Education';
 import CV from './components/CV';
 import './styles/App.css';
 
@@ -23,14 +25,36 @@ function App() {
     address: '10 Example St,\nExampleland,\n0123,\nNSW',
   });
 
+  const [work, setWork] = useState({
+    company: 'Example Inc.',
+    location: 'Remote',
+    position: 'Junior Dev.',
+    startDate: 'July 2024',
+    endDate: 'Current',
+    description: 'Lorem Ipsum',
+  });
+
+  const [education, setEducation] = useState({
+    school: 'University of Example',
+    degree: 'BSc. Example (2:1)',
+    startDate: 'Sept 2020',
+    endDate: 'July 2024',
+  });
+
   return (
     <>
       <header>
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       </header>
       <main>
-        <Personal personal={personal} setPersonal={setPersonal} />
-        <CV personal={personal} />
+        <div className='input'>
+          <Personal personal={personal} setPersonal={setPersonal} />
+          <WorkExperience work={work} setWork={setWork} />
+          <Education education={education} setEducation={setEducation} />
+        </div>
+        <div className='output'>
+          <CV personal={personal} work={work} education={education} />
+        </div>
       </main>
     </>
   );

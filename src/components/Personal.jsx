@@ -2,6 +2,7 @@
 
 function Personal({ personal, setPersonal }) {
   const { name, email, phone, address } = personal;
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPersonal((prevPersonal) => ({
@@ -19,10 +20,10 @@ function Personal({ personal, setPersonal }) {
         <div className='form-body'>
           <form>
             <div>
-              <label htmlFor='name'>Name</label>
+              <label htmlFor='personal-name'>Name</label>
               <input
                 type='text'
-                id='name'
+                id='personal-name'
                 name='name'
                 value={name}
                 onChange={handleChange}
@@ -31,10 +32,10 @@ function Personal({ personal, setPersonal }) {
               />
             </div>
             <div>
-              <label htmlFor='email'>Email</label>
+              <label htmlFor='personal-email'>Email</label>
               <input
                 type='email'
-                id='email'
+                id='personal-email'
                 name='email'
                 value={email}
                 onChange={handleChange}
@@ -43,10 +44,10 @@ function Personal({ personal, setPersonal }) {
               />
             </div>
             <div>
-              <label htmlFor='phone'>Phone</label>
+              <label htmlFor='personal-phone'>Phone</label>
               <input
                 type='tel'
-                id='phone'
+                id='personal-phone'
                 name='phone'
                 value={phone}
                 onChange={handleChange}
@@ -55,9 +56,9 @@ function Personal({ personal, setPersonal }) {
               />
             </div>
             <div>
-              <label htmlFor='address'>Address</label>
+              <label htmlFor='personal-address'>Address</label>
               <textarea
-                id='address'
+                id='personal-address'
                 name='address'
                 value={address}
                 onChange={handleChange}
