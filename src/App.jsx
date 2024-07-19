@@ -1,9 +1,21 @@
-import { useState } from 'react';
-import Personal from './Personal';
-import CV from './CV';
-import './App.css';
+import { useState, useEffect } from 'react';
+import ThemeToggle from './components/ThemeToggle';
+import Personal from './components/Personal';
+import CV from './components/CV';
+import './styles/App.css';
 
 function App() {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
   const [personal, setPersonal] = useState({
     name: 'Example Fullname',
     email: 'example@example.com',
@@ -13,8 +25,13 @@ function App() {
 
   return (
     <>
-      <Personal personal={personal} setPersonal={setPersonal} />
-      <CV personal={personal} />
+      <header>
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      </header>
+      <main>
+        <Personal personal={personal} setPersonal={setPersonal} />
+        <CV personal={personal} />
+      </main>
     </>
   );
 }

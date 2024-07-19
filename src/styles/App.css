@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+body {}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+label {
+  display: flex;
+  margin-bottom: 0.4rem;
+}
+
+input, textarea {
+  max-width: 10rem;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* PERSONAL */
+.personal-container {
+  max-width: 30%;
+  min-width: 20rem;
+}
+
+/* CV */
+.cv-container {
+  max-width: 70%;
+  min-width: 30rem;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--cv-background-color);
+  color: var(--cv-text-color);
+  border: 1px solid #ccc;
+  /* Light border to outline the document */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  border-radius: 8px;
+  /* Rounded corners for a more modern paper look */
+  overflow: hidden;
+  /* Hide any overflowing content */
+  transition: background-color 333ms ease;
+}
+
+
+.cv-container {
+  white-space: pre-wrap;
+  text-transform: initial;
+}
