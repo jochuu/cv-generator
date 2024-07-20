@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-function Education({ education, setEducation }) {
-  const { school, degree, startDate, endDate } = education;
+function Education({ education, setEducation, cv }) {
+  const { school, degree, startDate, endDate, project } = education;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,6 +73,18 @@ function Education({ education, setEducation }) {
                   value={endDate}
                   onChange={handleChange}
                   placeholder='End Date'
+                  autoComplete='off'
+                />
+              </div>
+              <div>
+                <label htmlFor='education-project'>Project</label>
+                <input
+                  type='text'
+                  id='education-project'
+                  name='project'
+                  value={project}
+                  onChange={handleChange}
+                  placeholder='Project'
                   autoComplete='off'
                 />
               </div>

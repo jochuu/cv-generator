@@ -7,8 +7,8 @@
 /* INPUT */
 .input-container {
   margin: 1rem;
-  max-height: 70vh;
   overflow-y: scroll;
+  max-height: 50rem;
 }
 
 .header-button {
@@ -21,26 +21,135 @@
 /* CV */
 .cv-container {
   margin: 1rem;
-  max-width: 70%;
-  min-width: 30rem;
-  padding: 20px;
+  max-width: 30rem;
+  padding: 1rem;
   white-space: pre-wrap;
   text-transform: initial;
-  box-sizing: border-box;
   background-color: var(--cv-background-color);
   color: var(--cv-text-color);
-  border: 1px solid #ccc;
-  /* Light border to outline the document */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
+  border: 1px solid var(--accent-1);
+  box-shadow: 0 1px 4px var(--accent-1);
   border-radius: 8px;
-  /* Rounded corners for a more modern paper look */
   overflow: hidden;
-  /* Hide any overflowing content */
   transition: background-color 333ms ease;
 }
 
+.cv-container>h2 {
+  margin: 0.6rem 0 auto;
+}
 
+.cv-personal-section {
+  display: flex;
+  place-items: center;
+  max-width: 100%;
+  background-color: var(--accent-1);
+}
+
+.cv-personal-info {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.cv-personal-name {
+  flex: 3;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.cv-personal-email {
+  flex: 0;
+}
+
+.cv-work-section {
+  margin: 0.4rem;
+}
+
+.cv-work-row {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+
+.cv-work-company {
+  font-weight: 600;
+  flex: 5;
+  text-align: left;
+}
+
+.cv-work-location {
+  font-weight: 200;
+  flex: 6 1 max-content;
+  text-align: left;
+  font-style: italic;
+}
+
+.cv-work-start-date {
+  flex: 1 1 min-content;
+  text-align: center;
+  font-size: small;
+}
+
+.divider {
+  flex: 0.5;
+  text-align: center;
+
+}
+
+.cv-work-end-date {
+  flex: 1 1 min-content;
+  text-align: center;
+  font-size: small;
+}
+
+.cv-work-position {
+  font-weight: 500;
+  font-size: smaller;
+}
+
+.cv-work-description {
+  padding: 0 0.6rem;
+  text-align: justify;
+}
+
+.cv-education-section {
+  margin: 0.4rem;
+}
+
+.cv-education-row {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+}
+
+.cv-education-school {
+  font-weight: 600;
+  flex: 11;
+  text-align: left;
+}
+
+.cv-education-degree {
+  font-weight: 200;
+  font-size: smaller;
+  flex: 6 1 max-content;
+  text-align: left;
+  font-style: italic;
+}
+
+.cv-education-start-date {
+  flex: 1 1 min-content;
+  text-align: center;
+  font-size: small;
+}
+
+.cv-education-end-date {
+  flex: 1 1 min-content;
+  text-align: center;
+  font-size: small;
+}
+
+.cv-education-project {
+  margin: 0.4rem;
+}
 
 /* FORM */
 .form-container {
@@ -61,4 +170,9 @@
 
 .form-body {
   margin: 0 auto;
+}
+
+.fullsize {
+  flex: 1 0 auto;
+  max-width: 100rem;
 }
