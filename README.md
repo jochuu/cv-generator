@@ -12,7 +12,7 @@ learning outcomes:
 - resizing elements with javascript
 
 [live demo](https://cv-generator-w2ec.vercel.app/)
-instructions:
 
+instructions:
 - npm install
 - npm run dev
