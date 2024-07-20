@@ -5,13 +5,20 @@ import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
 import CV from './components/CV';
 import './styles/App.css';
+import CVToggle from './components/CVToggle';
 
 function App() {
   const [theme, setTheme] = useState('light');
 
+  const [cv, setCV] = useState(true);
+
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
+  };
+
+  const toggleCV = () => {
+    setCV((prevCV) => !prevCV);
   };
 
   useEffect(() => {
@@ -45,17 +52,26 @@ function App() {
     <>
       <header>
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+
+        <CVToggle cv={cv} toggleCV={toggleCV} />
       </header>
       <main>
-        <div className='input'>
+        <div className='input-container'>
           <Personal personal={personal} setPersonal={setPersonal} />
           <WorkExperience work={work} setWork={setWork} />
           <Education education={education} setEducation={setEducation} />
         </div>
-        <div className='output'>
-          <CV personal={personal} work={work} education={education} />
-        </div>
+        <CV
+          personal={personal}
+          work={work}
+          education={education}
+          cv={cv}
+          setCV={toggleCV}
+        />
       </main>
+      <footer>
+        <h2>CV Generator</h2>
+      </footer>
     </>
   );
 }

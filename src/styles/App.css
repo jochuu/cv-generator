@@ -4,21 +4,28 @@
   padding: 2rem;
 }
 
-body {}
+/* INPUT */
+.input-container {
+  margin: 1rem;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
 
-
-
-/* PERSONAL */
-.personal-container {
-  max-width: 30%;
-  min-width: 20rem;
+.header-button {
+  background-color: var(--accent-1);
+  font-weight: 800;
+  color: var(--main);
+  padding: 1rem 5rem;
 }
 
 /* CV */
 .cv-container {
+  margin: 1rem;
   max-width: 70%;
   min-width: 30rem;
   padding: 20px;
+  white-space: pre-wrap;
+  text-transform: initial;
   box-sizing: border-box;
   background-color: var(--cv-background-color);
   color: var(--cv-text-color);
@@ -34,7 +41,24 @@ body {}
 }
 
 
-.cv-container {
-  white-space: pre-wrap;
-  text-transform: initial;
+
+/* FORM */
+.form-container {
+  display: flex;
+  flex-flow: column;
+  margin: 0.4rem 1.4rem;
+  box-sizing: border-box;
+  border: 1px solid var(--accent-1);
+  border-radius: 3px;
+  transition: background-color 333ms ease;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--accent-1);
+}
+
+.form-body {
+  margin: 0 auto;
 }
