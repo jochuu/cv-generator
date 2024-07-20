@@ -1,8 +1,16 @@
-# React + Vite
+#CV Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+learning outcomes:
+- setting up react using vite
+- hosting on vercel
+- how to use useState
+- creating components
+- conditionally rendering components
+- creating a light/dark mode
+- resizing elements with javascript
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[live demo](https://cv-generator-w2ec.vercel.app/)
+instructions: 
+- npm install
+- npm run dev

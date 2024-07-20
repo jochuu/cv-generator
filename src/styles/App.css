@@ -4,9 +4,33 @@
   padding: 2rem;
 }
 
+
+/* FORM */
+
+.form-container {
+  display: flex;
+  flex-flow: column;
+  margin: 1.4rem;
+  box-sizing: border-box;
+  border: 1px solid var(--accent-1);
+  border-radius: 3px;
+}
+
+.form-header {
+  /* background-color: var(--accent-1); */
+}
+
+.form-body {
+  margin: 0 auto;
+}
+
+.fullsize {
+  flex: 1 0 auto;
+  max-width: 100rem;
+}
+
 /* INPUT */
 .input-container {
-  margin: 1rem;
   overflow-y: scroll;
   max-height: 50rem;
 }
@@ -17,6 +41,7 @@
   color: var(--main);
   padding: 1rem 5rem;
 }
+
 
 /* CV */
 .cv-container {
@@ -38,6 +63,7 @@
   margin: 0.6rem 0 auto;
 }
 
+/* CV - PERSONAL */
 .cv-personal-section {
   display: flex;
   place-items: center;
@@ -60,6 +86,7 @@
   flex: 0;
 }
 
+/* CV - WORK */
 .cv-work-section {
   margin: 0.4rem;
 }
@@ -111,6 +138,8 @@
   text-align: justify;
 }
 
+/* CV - EDUCATION */
+
 .cv-education-section {
   margin: 0.4rem;
 }
@@ -151,28 +180,11 @@
   margin: 0.4rem;
 }
 
-/* FORM */
-.form-container {
+/* MISC */
+
+.button-container {
   display: flex;
-  flex-flow: column;
-  margin: 0.4rem 1.4rem;
-  box-sizing: border-box;
-  border: 1px solid var(--accent-1);
-  border-radius: 3px;
-  transition: background-color 333ms ease;
-}
-
-.form-header {
-  display: flex;
-  justify-content: center;
-  background-color: var(--accent-1);
-}
-
-.form-body {
-  margin: 0 auto;
-}
-
-.fullsize {
-  flex: 1 0 auto;
-  max-width: 100rem;
+  padding: 0.4rem;
+  margin: 0.2rem;
+  text-align: center;
 }
